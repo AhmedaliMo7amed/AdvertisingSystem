@@ -12,7 +12,7 @@ use Illuminate\Http\Request;
 class AdsController extends Controller
 {
     use ResponseTrait;
-    public $adService;
+    protected $adService;
 
     public function __construct(AdService $adService)
     {

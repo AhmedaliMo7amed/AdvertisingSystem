@@ -13,7 +13,7 @@ use Illuminate\Http\Request;
 class AdvertiserController extends Controller
 {
     use ResponseTrait;
-    public $advertiserService;
+    protected $advertiserService;
 
     public function __construct(AdvertiserService $advertiserService)
     {

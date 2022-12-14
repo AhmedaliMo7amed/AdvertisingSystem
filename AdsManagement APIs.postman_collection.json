@@ -1,0 +1,690 @@
+{
+	"info": {
+		"_postman_id": "16845c6f-a48a-45da-80f2-ec8d54df6adc",
+		"name": "AdsManagement APIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Ads APIs",
+			"item": [
+				{
+					"name": "All Ads",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}ads/all",
+							"host": [
+								"{{url}}ads"
+							],
+							"path": [
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show Ad By #ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}ads/show/100",
+							"host": [
+								"{{url}}ads"
+							],
+							"path": [
+								"show",
+								"100"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add New Ad (Attached to specific Advertiser)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "advertiser_id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "category_id",
+									"value": "10",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "free",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "new title for ads2",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "hello world",
+									"type": "text"
+								},
+								{
+									"key": "tags[0]",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "tags[1]",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "tags[3]",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "start_date",
+									"value": "2022-11-02",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}ads/add",
+							"host": [
+								"{{url}}ads"
+							],
+							"path": [
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Ad By #ID",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "advertiser_id",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "category_id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "free",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "new carssss",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "cooooooooooooooooooodxxx",
+									"type": "text"
+								},
+								{
+									"key": "start_date",
+									"value": "2022-12-09",
+									"type": "text"
+								},
+								{
+									"key": "tags[0]",
+									"value": "10",
+									"type": "text"
+								},
+								{
+									"key": "tags[1]",
+									"value": "15",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}ads/update/101?_method=put",
+							"host": [
+								"{{url}}ads"
+							],
+							"path": [
+								"update",
+								"101"
+							],
+							"query": [
+								{
+									"key": "_method",
+									"value": "put"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Ads",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "firstName",
+									"value": "Omar",
+									"type": "text"
+								},
+								{
+									"key": "lastName",
+									"value": "Goda",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "omar@gmail.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}ads/delete/101",
+							"host": [
+								"{{url}}ads"
+							],
+							"path": [
+								"delete",
+								"101"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Advertises APIs",
+			"item": [
+				{
+					"name": "All Advertiser",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}advertiser/all",
+							"host": [
+								"{{url}}advertiser"
+							],
+							"path": [
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show Advertiser By #ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}advertiser/show/1",
+							"host": [
+								"{{url}}advertiser"
+							],
+							"path": [
+								"show",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Advertiser Ads",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}advertiser/50/ads",
+							"host": [
+								"{{url}}advertiser"
+							],
+							"path": [
+								"50",
+								"ads"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add New Advertiser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "adada@gmil.com",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "mona",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "01098292994",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}advertiser/add",
+							"host": [
+								"{{url}}advertiser"
+							],
+							"path": [
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Advertiser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "kairma",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "01098292977",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "ahmed@gmail.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}advertiser/update/201?_method=put",
+							"host": [
+								"{{url}}advertiser"
+							],
+							"path": [
+								"update",
+								"201"
+							],
+							"query": [
+								{
+									"key": "_method",
+									"value": "put"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Advertiser",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "firstName",
+									"value": "Omar",
+									"type": "text"
+								},
+								{
+									"key": "lastName",
+									"value": "Goda",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "omar@gmail.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}advertiser/delete/201",
+							"host": [
+								"{{url}}advertiser"
+							],
+							"path": [
+								"delete",
+								"201"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Categories & Tags APIs",
+			"item": [
+				{
+					"name": "All Categories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}category/all",
+							"host": [
+								"{{url}}category"
+							],
+							"path": [
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add New Category",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "mega hat",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}category/add",
+							"host": [
+								"{{url}}category"
+							],
+							"path": [
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Category",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "modified epicx",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}category/update/241?_method=put",
+							"host": [
+								"{{url}}category"
+							],
+							"path": [
+								"update",
+								"241"
+							],
+							"query": [
+								{
+									"key": "_method",
+									"value": "put"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Category",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "firstName",
+									"value": "Omar",
+									"type": "text"
+								},
+								{
+									"key": "lastName",
+									"value": "Goda",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "omar@gmail.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}category/delete/241",
+							"host": [
+								"{{url}}category"
+							],
+							"path": [
+								"delete",
+								"241"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add New Tag",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "code manxsy",
+									"type": "text"
+								},
+								{
+									"key": "slug",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}tag/add",
+							"host": [
+								"{{url}}tag"
+							],
+							"path": [
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Tag",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "modified cars",
+									"type": "text"
+								},
+								{
+									"key": "slug",
+									"value": "xsada ss",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}tag/update/43?_method=put",
+							"host": [
+								"{{url}}tag"
+							],
+							"path": [
+								"update",
+								"43"
+							],
+							"query": [
+								{
+									"key": "_method",
+									"value": "put"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Tags",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "firstName",
+									"value": "Omar",
+									"type": "text"
+								},
+								{
+									"key": "lastName",
+									"value": "Goda",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "omar@gmail.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}tag/delete/43",
+							"host": [
+								"{{url}}tag"
+							],
+							"path": [
+								"delete",
+								"43"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Filters APIs",
+			"item": [
+				{
+					"name": "Filter Ads (By Category)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}filter/byCategory/94",
+							"host": [
+								"{{url}}filter"
+							],
+							"path": [
+								"byCategory",
+								"94"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Filter Ads (By Tags)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}filter/byTag/5",
+							"host": [
+								"{{url}}filter"
+							],
+							"path": [
+								"byTag",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Test Mails (Schedule Mails)",
+			"item": [
+				{
+					"name": "Checker",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}sendmail",
+							"host": [
+								"{{url}}sendmail"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

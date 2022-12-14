@@ -10,7 +10,7 @@ use Illuminate\Http\Request;
 class FiltersController extends Controller
 {
     use ResponseTrait;
-    public $filterService;
+    protected $filterService;
 
     public function __construct(FilterService $filterService)
     {

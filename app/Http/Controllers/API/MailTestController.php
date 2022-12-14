@@ -16,7 +16,6 @@ class MailTestController extends Controller
     use ResponseTrait;
     public function check()
     {
-
         // All Mails are sended to ** MAIL TRAP **
         // This is an testing controller but the process done by Command & Kernal Daily at 20:00PM
 

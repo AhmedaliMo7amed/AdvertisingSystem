@@ -13,7 +13,7 @@ use Illuminate\Http\Request;
 class TagsController extends Controller
 {
     use ResponseTrait;
-    public $tagService;
+    protected $tagService;
 
     public function __construct(TagService $tagService)
     {

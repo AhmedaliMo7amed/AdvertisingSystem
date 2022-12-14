@@ -11,7 +11,7 @@ use Illuminate\Http\Request;
 class CategoryController extends Controller
 {
     use ResponseTrait;
-    public $categoryService;
+    protected $categoryService;
 
     public function __construct(CategoryService $categoryService)
     {

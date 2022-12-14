@@ -27,6 +27,8 @@ class AdsController extends Controller
         $this->categoryService = $categoryService;
         $this->tagService = $tagService;
 
+
+
     }
 
     public function index()
